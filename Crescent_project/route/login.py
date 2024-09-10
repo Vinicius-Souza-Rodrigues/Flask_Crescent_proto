@@ -10,3 +10,4 @@ def login_generator():
 def login_form():
     email = session.get('email')
     password = session.get('password')
+    
