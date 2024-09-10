@@ -1,4 +1,5 @@
 from flask import Flask, Blueprint
+from route.login import login
 
 app = Flask(__name__)
 
