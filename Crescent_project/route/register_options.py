@@ -1,7 +1,7 @@
-from flask import Flask, redirect, render_template, Blueprint, url_for, session
+from flask import Flask, redirect, render_template, Blueprint
 
-register_option = Blueprint('register_option', __name__)
+register_options = Blueprint('register_options', __name__)
 
-@register_option.route('/options_register', method = ['GET'])
+@register_options.route('/register_options', method = ['GET'])
 def options_register():
-    return render_template('options_register.html')
+    return render_template('register_options.html')
