@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, Blueprint, url_for, session
+from flask import Flask, redirect, render_template, Blueprint, url_for, request
 
 login = Blueprint('login', __name__)
 
@@ -8,6 +8,10 @@ def login_generator():
 
 @login.route('/', methods = ['POST'])
 def login_form():
+    email = request.form.get('email')
+    senha = request.form.get('password')
+
     
+
     return redirect(url_for('index_generator'))
     

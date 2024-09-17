@@ -2,22 +2,29 @@
     padding: 0;
 }
 
+:root {
+    --cor_letras: #ffffff
+}
+
 body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: rgb(163, 89, 163);
+    background-image: url('../img/background.jpg');
+    background-size: cover;
 }
 
 .container {
     display: flex;
-    width: 850px;
-    height: 300px;
+    justify-content: space-around;
+    gap: 55px;
+    width: 1000px;
+    height: 450px;
 }
 
 .right {
-    padding: 10px;
-    width: 350px;
+    width: 400px;
+    border-radius: 15px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -29,17 +36,43 @@ body {
     width: 400px;
 }
 
+.left h1 {
+    margin-bottom: 20px;
+    font-size: 55px;
+    color: var(--cor_letras);
+}
+
+.left p {
+    font-size: 20px;
+    color: var(--cor_letras);
+}
+
 .senha {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 335px;
+    margin-bottom: 122px;
+}
 
+.senha a {
+    margin-top: 11px;
+}
+
+.container input {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(146, 144, 144, 0.863);
+}
+
+.pad-inputs {
+    padding: 12px;
 }
 
 .email {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 335px;
+    margin-bottom: 30px;
 }
 
 .enviar {
@@ -49,8 +82,19 @@ body {
 }
 
 .enviar input {
+    background-color: rgb(58, 57, 57);
     width:280px;
-    height: 35px;
+    height: 40px;
     border-radius: 6px;
+    margin-bottom: 12px ;
+    border: none;
+    color: var(--cor_letras);
 }
 
+a {
+    color: rgb(44, 43, 43);
+}
+
+.distancia {
+    padding-left: 10px;
+}

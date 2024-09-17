@@ -10,6 +10,8 @@ from database import init_app, db
 
 app = Flask(__name__)
 
+#app.secret_key
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345678@localhost/teste_crescent'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
