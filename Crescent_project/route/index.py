@@ -7,9 +7,11 @@ def index_usuario_generator():
     token = session['token']
     id = session['id_user']
 
+    print(token)
+    print(id)
+
     if not token or id:
         return redirect(url_for('login.login_generator'))
-    
     
 
     return render_template('index_main_usuario.html')
