@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    background-color: #f3f0f0;
+    border-radius: 15px;
+    width: 1000px;
+    height: 550px;
+}
+
+.cabecalho {
+    border-radius: 25px;
+    padding: 3px;
+    background-color: grey;
+}
+
+.cabecalho h1 {
+    font-size: 35px;
+    padding-left: 20px;
+}
+
