@@ -17,38 +17,48 @@
       <form action="{{url_for('register_user.register_user_form')}}" method = 'POST'>
 
         <div class="inputs">
-          <div class="name">
-            <label for="name">Nome:</label>
-            <input type="text" name="name" id="name" required>
-          </div>
+          <div class="mb1 alinhar">
+            <div class="name encolunar">
+              <label for="name">Nome:</label>
+              <input type="text" name="name" id="name" required>
+            </div>
 
-          <div class="username">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
-          </div>
+            <div class="username encolunar">
+              <label for="username">Username:</label>
+              <input type="text" name="username" id="username" required>
+            </div>
+          </div><!--mb1-->
 
-          <div class="email">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-          </div>
+          <div class="mb2 alinhar">
+            <div class="email encolunar">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required>
+            </div>
 
-          <div class="telephone">
-            <label for="telephone">Telefone:</label>
-            <input type="text" name="telephone" id="telephone" required>
-          </div>
+            <div class="telephone encolunar">
+              <label for="telephone">Telefone:</label>
+              <input type="text" name="telephone" id="telephone" required>
+            </div>
+          </div><!--mb2-->
 
-          <div class="password">
-            <label for="password">Senha:</label>
-            <input type="password" name="password" id="password" required>
-          </div>
+          <div class="mb3 alinhar">
+            <div class="password encolunar">
+              <label for="password">Senha:</label>
+              <input type="password" name="password" id="password" required>
+            </div>
 
-          <div class="confirm_password">
-            <label for="confirm_password">Confirmar Senha:</label>
-            <input type="password" name="confirm_password" id="confirm_password" required>
-          </div>
+            <div class="confirm_password encolunar">
+              <label for="confirm_password">Confirmar Senha:</label>
+              <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+          </div><!--mb3-->
+
         </div><!--inputs-->
 
-        <input type="submit" name="send" id="send" class="btn btn-primary">
+        <div class="send">
+          <input type="submit" name="send" id="send" class="enviar">
+          <p>Já possui uma conta? <a href="{{url_for('login.login_generator')}}">Login</a></p>
+        </div><!--send-->
 
       </form>
     </div><!--container-->
