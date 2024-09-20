@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from database.database import db, Usuario
+#from utils.crypt import encriptografar
 
 register_user = Blueprint('register_user', __name__)
 
