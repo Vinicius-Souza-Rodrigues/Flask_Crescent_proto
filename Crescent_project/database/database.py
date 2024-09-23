@@ -4,7 +4,7 @@ class Info(db.Model):
     __tablename__ = 'info'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    senha = db.Column(db.String(100), nullable=False)
+    senha = db.Column(db.String(100), nullable=False) #procurar achar criptgrafia por aq
     tipo_usuario = db.Column(db.String(100), nullable=False)
 
 class Usuario(Info):
