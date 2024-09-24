@@ -14,6 +14,10 @@ def login_form():
     senha = request.form.get('password')
 
     user_id = confirmar_senha(email, senha)
+
+    if not user_id:
+        return redirect(url_for('login.login_generator'))
+    
     sessao_tipo = tipo_sessao(user_id)
 
     token = secrets.token_hex(16)
