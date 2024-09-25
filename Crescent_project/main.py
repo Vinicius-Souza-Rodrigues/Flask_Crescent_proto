@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 app.secret_key = '3dcdaf74c8761209363e9a75450ba5b0'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345678@localhost/teste_crescent'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:22012006@localhost/teste_crescent'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 init_app(app)
@@ -26,6 +26,7 @@ app.register_blueprint(register_admin)
 app.register_blueprint(register_patro)
 app.register_blueprint(register_options)
 app.register_blueprint(forgot_password)
+#app.register_blueprint(change_password)
 
 if __name__ == '__main__':
     with app.app_context():

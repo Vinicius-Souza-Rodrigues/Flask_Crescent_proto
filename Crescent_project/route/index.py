@@ -8,7 +8,7 @@ def index_usuario_generator():
     token = session['token']
     id = session['id_user']
 
-    if verificar_session(token, id) == False or verificar_integridade_token(token) == False:
+    if verificar_session(token, id) == False or verificar_integridade_token(token, id) == False:
         return redirect(url_for('login.login_generator'))
     else:
         return render_template('index_main_usuario.html')
