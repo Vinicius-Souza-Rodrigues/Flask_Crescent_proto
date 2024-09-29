@@ -31,11 +31,11 @@ class Prop(Info):
     id = db.Column(db.Integer, db.ForeignKey('info.id'), primary_key=True)
     nome_empresa = db.Column(db.String(100), unique=False, nullable=False)
     nome_responsavel = db.Column(db.String(100), unique=False, nullable=False)
-    razao_social = db.Column(db.String(100), unique=True, nullable=False)
+    razao_social = db.Column(db.String(100), unique=False, nullable=False)
     CNPJ = db.Column(db.String(100), unique=True, nullable=False)
     telefone = db.Column(db.String(100), unique=False, nullable=False)
-    tpo_veiculo = db.Column(db.String(100), unique=True, nullable=False)
-    caracteristica_veiculo = db.Column(db.String(100), unique=True, nullable=False)
+    tpo_veiculo = db.Column(db.String(100), unique=False, nullable=False)
+    caracteristica_veiculo = db.Column(db.String(100), unique=False, nullable=False)
 
 class Patro(Info):
     __tablename__ = 'patrocinador'
@@ -44,3 +44,12 @@ class Patro(Info):
     nome_responsavel = db.Column(db.String(100), unique=False, nullable=False)
     CNPJ = db.Column(db.String(100), unique=True, nullable=False)
     telefone = db.Column(db.String(100), unique=False, nullable=False)
+
+class Shows(db.Model):
+    __tablename__ = 'shows'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    local = db.Column(db.DateTime, nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    preco = db.Column(db.Integer, nullable=False)
+    image_url = db.Column(db.String(255))

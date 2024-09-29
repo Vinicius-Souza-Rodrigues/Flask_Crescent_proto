@@ -36,6 +36,18 @@
 
         <main>
           <p>LISTAS</p>
+
+          <div class="paginacao">
+            {% if shows.has_prev %}
+                <a href="{{ url_for('index.index_usuario_generator', page=shows.prev_num) }}">Voltar</a>
+            {% endif %}
+            
+            <span>Página {{ shows.page }} de {{ shows.pages }}</span>
+        
+            {% if shows.has_next %}
+                <a href="{{ url_for('index.index_usuario_generator', page=shows.next_num) }}">Proxima</a>
+            {% endif %}
+        </div><!--paginacao-->
         </main>
       </form>
     </div><!--container-->
