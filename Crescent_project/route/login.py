@@ -26,8 +26,8 @@ def login_form():
 
     print(sessao_tipo)
     if sessao_tipo == 'usuario':
-        return redirect(url_for('index.index_usuario_generator'))
+        return redirect(url_for('index_usuario.index_usuario_generator'))
     else:
-        return redirect(url_for('index_gerenciamento_generator'))   
+        return redirect(url_for('index_gerenciamento.index_gerenciamento_generator'))   
 
     

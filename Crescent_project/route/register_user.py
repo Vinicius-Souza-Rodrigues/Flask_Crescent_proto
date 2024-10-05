@@ -20,9 +20,7 @@ def register_user_form():
 
     #verificar senha
     if password != confirm_password:
-        return redirect(url_for('register_user_generator'))
-    
-    #hashed_password = encriptografar(password)
+        return redirect(url_for('register_user.register_user_generator'))
 
     #classe para passar os parametros do usuario normal
     novo_usuario = Usuario(

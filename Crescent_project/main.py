@@ -6,7 +6,9 @@ from route.register_user import register_user
 from route.register_prop import register_prop
 from route.register_options import register_options
 from route.forgot_password import forgot_password
-from route.index import index
+from route.index_usuario import index_usuario
+from route.index_gerenciamento import index_gerenciamento
+from route.index_user_config import index_user_config
 from database import init_app, db  
 
 app = Flask(__name__)
@@ -19,13 +21,15 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 init_app(app)
 
 app.register_blueprint(login)
-app.register_blueprint(index)
+app.register_blueprint(index_gerenciamento)
+app.register_blueprint(index_usuario)
 app.register_blueprint(register_user)
 app.register_blueprint(register_prop)
 app.register_blueprint(register_admin)
 app.register_blueprint(register_patro)
 app.register_blueprint(register_options)
 app.register_blueprint(forgot_password)
+app.register_blueprint(index_user_config)
 #app.register_blueprint(change_password)
 
 if __name__ == '__main__':

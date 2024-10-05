@@ -14,13 +14,13 @@
         <h1>Cadastrar imprensa</h1>
       </div><!--cabecalho-->
 
-      <form action="{{url_for('register_user.register_user_form')}}" method = 'POST'>
+      <form action="{{url_for('register_prop.register_prop_form')}}" method = 'POST'>
 
         <div class="inputs">
           <div class="mb1 alinhar">
-            <div class="name encolunar">
-              <label for="name">Nome</label>
-              <input type="text" name="name" id="name" required>
+            <div class="nome encolunar">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" required>
             </div>
 
             <div class="responsavel encolunar">
@@ -55,7 +55,7 @@
 
           <div class="mb4 alinhar">
             <div class="veiculo_info encolunar">
-              <label for="veiculo_info">Veículo</label>
+              <label for="veiculo_info">Tipo de Veículo</label>
               <input type="veiculo_info" name="veiculo_info" id="veiculo_info" required>
             </div>
 
@@ -66,9 +66,9 @@
           </div><!--mb4-->
 
           <div class="mb5 alinhar">
-            <div class="senha encolunar">
+            <div class="password encolunar">
               <label for="">Senha</label>
-              <input type="password" name="senha" id="senha" required>
+              <input type="password" name="password" id="password" required>
             </div>
 
             <div class="confirm_password encolunar">
