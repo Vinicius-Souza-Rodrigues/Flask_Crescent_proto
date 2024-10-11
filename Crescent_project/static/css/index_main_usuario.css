@@ -50,4 +50,13 @@ nav ul {
     width: 550px
 }
 
+.show_style img {
+    background-color: grey;
+}
+
+.show_style {
+    background-color: green;
+    width: 20%;
+}
+
 /*#812d9b*/

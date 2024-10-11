@@ -30,7 +30,7 @@
           <a href="{{url_for('index_user_config.index_user_config_generator')}}" class="user-icon">
             <i class="fa-solid fa-user" style="color: #000000;"></i>
           </a><!--user-icon-->
-          <a href="logout" class="logout-icon">
+          <a href="{{url_for('index_usuario.index_usuario_logout')}}" class="logout-icon">
             <i class="fa-solid fa-right-from-bracket" style="color: #000000;"></i>
           </a><!--logout-icon-->
         </div><!--options-->
@@ -48,7 +48,7 @@
       <main>
         {% for show in shows.items %}
         <div class="show_style">
-          <img src="{{ show.imagem_url }}" alt="">
+          <img src="{{ show.imagem_url }}" alt="asasas">
           <h2>{{ show.title }}</h2>
           <p>{{ show.local }}</p>
           <p>{{ show.description }}</p>

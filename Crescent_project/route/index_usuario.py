@@ -15,3 +15,9 @@ def index_usuario_generator():
     shows = shows_request()
 
     return render_template('index_main_usuario.html', shows=shows)
+
+@index_usuario.route('/logout', methods = ['GET'])
+def index_usuario_logout():
+    session.clear()
+    print('a')
+    return redirect(url_for('login.login_generator'))
