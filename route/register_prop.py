@@ -42,5 +42,4 @@ def register_prop_form():
     )
     db.session.add(novo_usuario)
     db.session.commit()
-    print('alog')
     return redirect(url_for('login.login_generator'))

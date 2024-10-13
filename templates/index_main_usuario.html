@@ -16,22 +16,22 @@
 
         <div class="pesquisa">
           <div class="bars-icon">
-            <i class="fa-solid fa-bars" style="color: #74C0FC;"></i>
+            <i class="fa-solid fa-bars" style="color: #323335;"></i>
           </div>
-          <input type="text">
+          <input type="text" value="Procure seu evento">
           <div class="lupa-icon">
             <a href="nada">
-              <i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i>
+              <i class="fa-solid fa-magnifying-glass" style="color: #323335;"></i>
             </a>
           </div>
         </div><!--pesquisa-->
 
         <div class="options">
           <a href="{{url_for('index_user_config.index_user_config_generator')}}" class="user-icon">
-            <i class="fa-solid fa-user" style="color: #000000;"></i>
+            <i class="fa-solid fa-user" style="color: #ffffff;"></i>
           </a><!--user-icon-->
           <a href="{{url_for('index_usuario.index_usuario_logout')}}" class="logout-icon">
-            <i class="fa-solid fa-right-from-bracket" style="color: #000000;"></i>
+            <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
           </a><!--logout-icon-->
         </div><!--options-->
       </header>
@@ -48,7 +48,7 @@
       <main>
         {% for show in shows.items %}
         <div class="show_style">
-          <img src="{{ show.imagem_url }}" alt="asasas">
+          <img src="{{url_for('static', filename = 'uploads/438552-Kaonashi-Spirited-Away-light-effects-reflection.jpg')}}" alt="asasas">
           <h2>{{ show.title }}</h2>
           <p>{{ show.local }}</p>
           <p>{{ show.description }}</p>

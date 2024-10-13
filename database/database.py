@@ -52,4 +52,4 @@ class Shows(db.Model):
     local = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
     preco = db.Column(db.Integer, nullable=False)
-    #image_url = db.Column(db.String(255))
+    url_img = db.Column(db.String(255), nullable=True)

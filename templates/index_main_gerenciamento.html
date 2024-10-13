@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="{{url_for('index_gerenciamento.index_gerenciamento_form')}}" method = 'POST'>
+      <form action="{{ url_for('index_gerenciamento.index_gerenciamento_form') }}" method="POST" enctype="multipart/form-data">
         <p>titulo</p>
         <input type="text" name="title" class="title" required>
         <p>local</p>
@@ -18,7 +18,7 @@
         <p>preço</p>
         <input type="number" name="preco" id="preco" required>
         <p>imagem</p>
-        
+        <input type="file" name="url_img" id="url_img" required>
         
         <input type="submit" value="enviar">
       </form>
