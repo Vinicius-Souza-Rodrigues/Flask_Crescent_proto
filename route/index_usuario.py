@@ -12,15 +12,18 @@ def index_usuario_generator():
 
         if verificar_session(token, id) == False or verificar_integridade_token(token, id) == False:
             return redirect(url_for('login.login_generator'))
-    
+        
         shows = shows_request()
 
         return render_template('index_main_usuario.html', shows=shows)
     
     except Exception as ex:
-        print(f'erro {ex}')
+        print(f'erro11 {ex}')
         return redirect(url_for('login.login_generator'))
 
+@index_usuario.route('/index/usuario/meus shows', methods = ['GET'])
+def index_meus_shows_generator():
+    return render_template('index_meus_shows.html')
 
 @index_usuario.route('/logout', methods = ['GET'])
 def index_usuario_logout():
