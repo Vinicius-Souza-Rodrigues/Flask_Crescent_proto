@@ -17,9 +17,9 @@ def index_gerenciamento_form():
     img_file = request.files.get('url_img')
     
     filename = img_file.filename
-    static_caminho = os.path.join(os.getcwd(), 'static', 'uploads')
-    url_img = os.path.join(static_caminho, filename)
-    img_file.save(url_img)
+    static_caminho = os.path.join('static', 'uploads', filename)
+    img_file.save(os.path.join(os.getcwd(), static_caminho))
+    url_img = f'/static/uploads/{filename}'
 
     novo_show = Shows(
         title=name,

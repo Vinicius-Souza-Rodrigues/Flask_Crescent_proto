@@ -2,20 +2,26 @@
 
 {% block title %}Página Principal{% endblock %}
 
-{% block content %}
-  {% for show in shows.items %}
-  <div class="show_style">
-    <img src="{{url_for('static', filename = 'uploads/438552-Kaonashi-Spirited-Away-light-effects-reflection.jpg')}}" alt="asasas">
-    <h2>{{ show.title }}</h2>
-    <p>{{ show.local }}</p>
-    <p>{{ show.description }}</p>
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='css/index_main_usuario.css')}}">
+{% endblock %}
 
-    <div class="rodape">
-      <p>{{ show.preco }}</p>
-      <input type="button" class="botao" value="Detalhes">
-    </div>
-  </div>
-  {% endfor %}
+{% block content %}
+    <div class="all_shows">
+      {% for show in shows.items %}
+      <div class="show_style">
+        <img src="{{ show.url_img }}" alt="asasas">
+        <h2>{{ show.title }}</h2>
+        <p>{{ show.local }}</p>
+        <p>{{ show.description }}</p>
+
+        <div class="rodape">
+          <p>{{ show.preco }}</p>
+          <input type="button" class="botao" value="Detalhes">
+        </div>
+      </div><!--show_style-->
+      {% endfor %}
+    </div><!--all_shows-->
 
   <div class="paginacao">
     {% if shows.has_prev %}
