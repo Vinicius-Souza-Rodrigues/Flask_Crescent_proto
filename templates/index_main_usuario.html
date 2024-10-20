@@ -7,16 +7,21 @@
 {% endblock %}
 
 {% block content %}
+    <div class="content_nome_page">
+      <div class="nome_page">
+        <h1>Shows Disponiveis</h1>
+      </div><!--nome_page-->
+    </div><!--content_nome_page-->
     <div class="all_shows">
       {% for show in shows.items %}
       <div class="show_style">
-        <img src="{{ show.url_img }}" alt="asasas">
+        <img src="{{ url_for('index_gerenciamento.exibir_imagem', show_id=show.id) }}" alt="show">
         <h2>{{ show.title }}</h2>
-        <p>{{ show.local }}</p>
-        <p>{{ show.description }}</p>
+        <p class="local">{{ show.local }}</p>
+        <p class="description">{{ show.description }}</p>
 
         <div class="rodape">
-          <p>{{ show.preco }}</p>
+          <p class="preco">{{ show.preco }} R$</p>
           <input type="button" class="botao" value="Detalhes">
         </div>
       </div><!--show_style-->

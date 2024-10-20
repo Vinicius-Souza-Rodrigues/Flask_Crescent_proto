@@ -1,6 +1,6 @@
-from flask import redirect, render_template, Blueprint, url_for, request
+from flask import redirect, render_template, Blueprint, url_for, request, send_file
 from database.database import db, Shows
-import os
+import io
 
 index_gerenciamento = Blueprint('index_gerenciamento', __name__)
 
@@ -16,20 +16,22 @@ def index_gerenciamento_form():
     preco = request.form.get('preco')
     img_file = request.files.get('url_img')
     
-    filename = img_file.filename
-    static_caminho = os.path.join('static', 'uploads', filename)
-    img_file.save(os.path.join(os.getcwd(), static_caminho))
-    url_img = f'/static/uploads/{filename}'
+    img = img_file.read()
 
     novo_show = Shows(
         title=name,
         local=local,
         description=descricao,
         preco=preco,
-        url_img=url_img
+        imagem=img
     )
 
     db.session.add(novo_show)
     db.session.commit()
     
     return redirect(url_for('index_gerenciamento.index_gerenciamento_generator'))
+
+@index_gerenciamento.route('/show/imagem/<int:show_id>', methods = ['GET'])
+def exibir_imagem(show_id):
+    show = Shows.query.get(show_id)
+    return send_file(io.BytesIO(show.imagem), mimetype='image/jpeg')

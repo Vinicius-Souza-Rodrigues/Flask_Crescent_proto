@@ -1,18 +1,70 @@
-.all_shows {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: Nunito;
+}
+
+main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+
+}
+
+.all_shows {
+    background-color: rgb(206, 203, 203);
+    width: 97%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 37px;
+    padding-left: 45px;
+    padding-bottom: 50px;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.rodape {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-around;
+}
+
+.paginacao {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(175, 173, 173);
 }
 
 .show_style {
-    border-radius: 17px;
-    height: 20%;
+    border-radius: 14px;
+    height: 525px;
     display: flex;
     flex-direction: column;
-    width: 26.6%;
-    background-color: rgb(218, 220, 224);
+    width: 29.6%;
+    background-color: rgb(245, 241, 241);
+}
+
+.show_style h2 {
+    font-size: 25px;
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.show_style p {
+    margin-left: 12px;
+}
+
+.description {
+    margin-top: 12px;
+    word-wrap: break-word;
+    width: 90%;
+    height: 100px;
 }
 
 .show_style img {
-    border-radius: 17px;
+    border-radius: 14px;
     width: 100%;
     height: 230px;
     object-fit: cover;
@@ -21,9 +73,39 @@
 
 .rodape {
     display: flex;
+    margin-left: 123px;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.content_nome_page {
+    background-color: rgb(206, 203, 203);
+    width: 97%;
+    border-radius: 40px 40px 0px 0px;
+    padding: 19px 35px 0px 33px;
+}
+
+.nome_page {
+    border-bottom: 3px solid black;
+}
+
+.nome_page h1 {
+    padding-left: 20px;
 }
 
 .rodape p {
+    padding: 5px;
+    border-radius: 16.5px;
     background-color: white;
     border: 1px solid purple;
+}
+
+.rodape input {
+    border: none;
+    background-color: rgb(129, 45, 155);
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 40px;
+    border-radius: 18px;
+    color: white;
 }
