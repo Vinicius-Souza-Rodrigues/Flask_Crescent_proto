@@ -38,7 +38,7 @@ main {
 
 .show_style {
     border-radius: 14px;
-    height: 525px;
+    height: 513px;
     display: flex;
     flex-direction: column;
     width: 29.6%;
@@ -73,12 +73,13 @@ main {
 
 .rodape {
     display: flex;
-    margin-left: 123px;
+    margin-left: 135px;
     justify-content: space-around;
     width: 200px;
 }
 
 .content_nome_page {
+    font-size: 20px;
     background-color: rgb(206, 203, 203);
     width: 97%;
     border-radius: 40px 40px 0px 0px;
