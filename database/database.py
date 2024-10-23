@@ -14,6 +14,9 @@ class Usuario(Info):
     username = db.Column(db.String(100), unique=False, nullable=False)
     telefone = db.Column(db.String(100), unique=False, nullable=False)
 
+
+
+
 class Admin(Info):
     __tablename__ = 'admin'
     id = db.Column(db.Integer, db.ForeignKey('info.id'), primary_key=True)
@@ -52,4 +55,10 @@ class Shows(db.Model):
     local = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
     preco = db.Column(db.Integer, nullable=False)
+    quantidade = db.Column(db.Integer, nullable=False)
     imagem = db.Column(db.LargeBinary, nullable=False)
+    
+#class MeusShows(Shows):
+    #__tablename__ = 'meusShows'
+    #id = db.Column(db.Integet, db.ForeignKey('shows.id'), primary_key=True)
+

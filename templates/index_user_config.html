@@ -10,10 +10,13 @@
   <img src="{{url_for('static', filename = 'img/icone_imagem.png')}}" alt="algo">
 
   <div class="container_nomes">
-    <h1>Apelido: {{ usuario.username }}</h1>
-    <h2>Nome: {{ usuario.nome }}</h2>
+    <h1>{{ usuario.username }}</h1>
+    <h2>{{ usuario.nome }}</h2>
   </div><!--conatiner_nomes-->
 </div><!--header-->
+
+<div class="gambiarra">
+</div>
 
 <div class="resto">
   <p>Email: {{ info.email }}</p>

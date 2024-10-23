@@ -14,6 +14,7 @@ def index_gerenciamento_form():
     local = request.form.get('local')
     descricao = request.form.get('description')
     preco = request.form.get('preco')
+    quantidade = request.form.get('quantidade')
     img_file = request.files.get('url_img')
     
     img = img_file.read()
@@ -23,6 +24,7 @@ def index_gerenciamento_form():
         local=local,
         description=descricao,
         preco=preco,
+        quantidade=quantidade,
         imagem=img
     )
 
