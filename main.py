@@ -9,14 +9,14 @@ from route.forgot_password import forgot_password
 from route.index_usuario import index_usuario
 from route.index_gerenciamento import index_gerenciamento
 from route.index_user_config import index_user_config
-from route.index_meus_shows import index_meus_shows
+from route.index_show_interface import index_show_interface
 from database import init_app, db  
 
 app = Flask(__name__)
 
 app.secret_key = '3dcdaf74c8761209363e9a75450ba5b0'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:22012006@localhost/teste_crescent'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345678@localhost/teste_crescent'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 init_app(app)
@@ -29,7 +29,7 @@ app.register_blueprint(register_prop)
 app.register_blueprint(register_admin)
 app.register_blueprint(register_patro)
 app.register_blueprint(register_options)
-app.register_blueprint(index_meus_shows)
+app.register_blueprint(index_show_interface)
 app.register_blueprint(forgot_password)
 app.register_blueprint(index_user_config)
 #app.register_blueprint(change_password)

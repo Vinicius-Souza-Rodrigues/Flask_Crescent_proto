@@ -17,5 +17,6 @@ def index_user_config_generator():
 
     except Exception as ex:
         print(f'erro13 {ex}')
+        return redirect(url_for('login.login_generator'))
 
     return render_template('index_user_config.html', usuario=usuario, info=info) 

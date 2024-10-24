@@ -30,6 +30,8 @@ def index_meus_shows_generator():
         if verificar_session(token, id) == False or verificar_integridade_token(token, id) == False:
             return redirect(url_for('login.login_generator'))
         
+        meus_shows = meus_shows_request()
+
     except Exception as ex:
         print(f'erro12 {ex}')
         return redirect(url_for('login.login_generator'))

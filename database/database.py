@@ -56,9 +56,14 @@ class Shows(db.Model):
     description = db.Column(db.Text, nullable=False)
     preco = db.Column(db.Integer, nullable=False)
     quantidade = db.Column(db.Integer, nullable=False)
+    data = db.Column(db.Date, nullable=False)
     imagem = db.Column(db.LargeBinary, nullable=False)
-    
-#class MeusShows(Shows):
-    #__tablename__ = 'meusShows'
-    #id = db.Column(db.Integet, db.ForeignKey('shows.id'), primary_key=True)
 
+class MeusShows(db.Model):
+    __tablename__ = 'meus_shows'
+    id = db.Column(db.Integer, primary_key=True)
+    usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'), nullable=False)
+    show_id = db.Column(db.Integer, db.ForeignKey('shows.id'), nullable=False)
+    
+    show = db.relationship('Shows', backref='meus_shows', lazy=True)
+    
